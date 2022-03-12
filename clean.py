@@ -1,19 +1,23 @@
 import pandas as pd
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 import json
 import argparse
-from argparse import Namespace
 from typing import Dict, List
 
 from clean_fill.clean.remove_unnamed import RemoveUnnamed
 from clean_fill.fill.release_date import ReleaseDate
 
+
 def main():
-    parser: argparse.ArgumentParser = argparse.ArgumentParser(description='Clean and fill data')
-    parser.add_argument('--input', type=str, help='Input file', required=True)
-    parser.add_argument('--clean', action='store_true', help='Clean data', default=False)
-    parser.add_argument('--fill', action='store_true', help='Fill missing data', default=False)
+    parser: argparse.ArgumentParser = argparse.ArgumentParser(
+        description="Clean and fill data"
+    )
+    parser.add_argument("--input", type=str, help="Input file", required=True)
+    parser.add_argument(
+        "--clean", action="store_true", help="Clean data", default=False
+    )
+    parser.add_argument(
+        "--fill", action="store_true", help="Fill missing data", default=False
+    )
 
     args: argparse.Namespace = parser.parse_args()
 
