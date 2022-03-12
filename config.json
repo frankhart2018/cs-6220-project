@@ -1,7 +1,8 @@
 {
   "cleaners": [
     "remove_unnamed",
-    "get_release_year"
+    "get_release_year",
+    "running_time_mins"
   ],
   "fillers": [
     "release_date"

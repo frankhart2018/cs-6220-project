@@ -5,6 +5,7 @@ from typing import Dict, List
 
 from clean_fill.clean.remove_unnamed import RemoveUnnamed
 from clean_fill.clean.get_release_year import GetReleaseYear
+from clean_fill.clean.running_time_mins import RunningTimeMins
 from clean_fill.fill.release_date import ReleaseDate
 
 
