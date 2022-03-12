@@ -63,7 +63,7 @@ class ReleaseDate(Filler):
                     break
 
             if not found_release_date:
-                release_dates.append("Not Found")
+                release_dates.append(None)
 
         self.__browser.close()
 

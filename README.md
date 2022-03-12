@@ -40,4 +40,5 @@ user@programmer~:$ python clean.py --input_file input.csv --clean --fill
 
 1. All cleaners are inherited from `Cleaner` class from `clean_fill/clean/cleaner` module which is the base class for all of them, the same for fillers is in `Filler` class from `clean_fill/fill/filler` module.
 2. To add a new cleaner or filler add a new class to the respective sub-package and inherit from the respective base class.
-3. Finally to use it during cleaning and filling process add the name of the class in snake case in the `config.json` file.
+3. Import the class in the `clean.py` script.
+4. Finally to use it during cleaning and filling process add the name of the class in snake case in the `config.json` file.
