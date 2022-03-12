@@ -3,3 +3,5 @@
 .ipynb_
 .idea/
 __pycache__/
+.ipynb_checkpoints/
+*.csv
