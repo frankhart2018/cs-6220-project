@@ -28,21 +28,6 @@ def main():
 
     processes: str = ""
 
-    if args.clean:
-        processes += "_cleaned"
-
-        # Clean
-        print("Cleaning....")
-        for cleaner in config["cleaners"]:
-            class_name = cleaner.replace("_", " ").title().replace(" ", "")
-            print(f"Running {class_name} cleaner!")
-
-            try:
-                obj = eval(class_name)()
-                df = obj.clean(df)
-            except NameError as _:
-                print(f"{class_name} cleaner not found!")
-
     if args.fill:
         processes += "_filled"
 
@@ -57,6 +42,21 @@ def main():
                 df = obj.fill(df=df)
             except NameError as _:
                 print(f"{class_name} filler not found!")
+
+    if args.clean:
+        processes += "_cleaned"
+
+        # Clean
+        print("Cleaning....")
+        for cleaner in config["cleaners"]:
+            class_name = cleaner.replace("_", " ").title().replace(" ", "")
+            print(f"Running {class_name} cleaner!")
+
+            try:
+                obj = eval(class_name)()
+                df = obj.clean(df)
+            except NameError as _:
+                print(f"{class_name} cleaner not found!")
 
     input_file_name = ".".join(args.input.split(".")[:-1])
     output_file_name = f"{input_file_name}{processes}_processed.csv"
