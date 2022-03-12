@@ -18,7 +18,6 @@ def main():
     args: argparse.Namespace = parser.parse_args()
 
     df: pd.DataFrame = pd.read_csv(args.input)
-    # browser: webdriver.Chrome = webdriver.Chrome(ChromeDriverManager().install())
 
     with open("./config.json", "r") as f:
         config: Dict[str, List[str]] = json.load(f)
@@ -51,7 +50,7 @@ def main():
 
             try:
                 obj = eval(class_name)()
-                df = obj.fill(df)
+                df = obj.fill(df=df)
             except NameError as _:
                 print(f"{class_name} filler not found!")
 
