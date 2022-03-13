@@ -51,7 +51,7 @@ class ReleaseDate(Filler):
 
             found_release_date = False
             for country_tr in country_trs:
-                country_tds = country_tr.find_elements(by="xpath", value="//td")
+                country_tds = country_tr.find_elements(by="xpath", value="./child::td")
 
                 if country_tds[0].text == "USA":
                     release_date = country_tds[1].text
