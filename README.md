@@ -22,7 +22,7 @@ The clean and fill script takes one required argument and two optional arguments
 2. `clean`: A flag that turns on cleaning feature, and cleans the input file using the available cleaners in `config.json`.
 3. `fill`: A flag that turns on filling feature, and fills the input file using the available fillers in `config.json`.
 
-If you pass only the `input_file` argument, the script will not perform any processing.
+If you pass only the `input` argument, the script will not perform any processing.
 
 For more information on the clean and fill script, please refer to the help using:
 
