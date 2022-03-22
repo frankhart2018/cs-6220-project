@@ -1,7 +1,7 @@
 import pandas as pd
 from typing import List, Optional
 
-from clean_fill.clean.cleaner import Cleaner
+from tasks.clean_fill.clean.cleaner import Cleaner
 
 
 class GetReleaseYear(Cleaner):

@@ -1,6 +1,6 @@
 import pandas as pd
 
-from clean_fill.clean.cleaner import Cleaner
+from tasks.clean_fill.clean.cleaner import Cleaner
 
 
 class RunningTimeMins(Cleaner):

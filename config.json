@@ -6,5 +6,14 @@
   ],
   "fillers": [
     "release_date"
-  ]
+  ],
+  "movie_desc_embeddings_runner": {
+    "tsne": {
+      "n_components": 2,
+      "init": "random",
+      "embeddings_path": "data/embeddings.npy",
+      "tsne_x_path": "data/tsne_x.npy",
+      "tsne_y_path": "data/tsne_y.npy"
+    }
+  }
 }

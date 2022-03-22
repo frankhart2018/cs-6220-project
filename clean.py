@@ -3,10 +3,10 @@ import json
 import argparse
 from typing import Dict, List
 
-from clean_fill.clean.remove_unnamed import RemoveUnnamed
-from clean_fill.clean.get_release_year import GetReleaseYear
-from clean_fill.clean.running_time_mins import RunningTimeMins
-from clean_fill.fill.release_date import ReleaseDate
+from tasks.clean_fill.clean.remove_unnamed import RemoveUnnamed
+from tasks.clean_fill.clean.get_release_year import GetReleaseYear
+from tasks.clean_fill.clean.running_time_mins import RunningTimeMins
+from tasks.clean_fill.fill.release_date import ReleaseDate
 
 
 def main():
@@ -25,7 +25,7 @@ def main():
 
     df: pd.DataFrame = pd.read_csv(args.input)
 
-    with open("./config.json", "r") as f:
+    with open("config.json", "r") as f:
         config: Dict[str, List[str]] = json.load(f)
 
     processes: str = ""

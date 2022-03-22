@@ -4,8 +4,8 @@ from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 from tqdm import tqdm
 
-from clean_fill.fill.filler import Filler
-from clean_fill.utils.constants import IMDB_URL
+from tasks.clean_fill.fill.filler import Filler
+from tasks.clean_fill.utils.constants import IMDB_URL
 
 
 class ReleaseDate(Filler):
@@ -29,7 +29,7 @@ class ReleaseDate(Filler):
 
             search_bar = self.__browser.find_element(
                 by="xpath",
-                value="//input[@class='imdb-header-search__input _3gDVKsXm3b_VAMhhSw1haV react-autosuggest__input']",
+                value="//input[@id='suggestion-search']",
             )
             search_bar.send_keys(movie_name)
             search_bar.send_keys(Keys.ENTER)
