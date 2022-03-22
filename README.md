@@ -18,7 +18,7 @@ This can be achieved by using the `clean_fill` package and the `clean.py` script
 
 The clean and fill script takes one required argument and two optional arguments:
 
-1. `input_file`: The input CSV file that is to be cleaned and filled.
+1. `input`: The input CSV file that is to be cleaned and filled.
 2. `clean`: A flag that turns on cleaning feature, and cleans the input file using the available cleaners in `config.json`.
 3. `fill`: A flag that turns on filling feature, and fills the input file using the available fillers in `config.json`.
 
@@ -33,7 +33,7 @@ user@programmer~:$ python clean.py --help
 To run with all the available options:
 
 ```bash
-user@programmer~:$ python clean.py --input_file input.csv --clean --fill
+user@programmer~:$ python clean.py --input input.csv --clean --fill
 ```
 
 #### Adding new cleaners and fillers
