@@ -7,8 +7,8 @@ from tasks.process.task_runner import TaskRunner
 
 class GetTsneCoords(TaskRunner):
     def run(self, **kwargs):
-        if "n_components" not in kwargs or "init" not in kwargs and "embeddings_path" not in kwargs:
-            raise ValueError("'n_components', 'init', 'embeddings_path' are required arguments!")
+        required_args = ["n_components", "init", "embeddings_path", "tsne_x_path", "tsne_y_path"]
+        self._required_args_checker(kwargs, required_args)
 
         embeddings = np.load(kwargs["embeddings_path"], allow_pickle=True)
 

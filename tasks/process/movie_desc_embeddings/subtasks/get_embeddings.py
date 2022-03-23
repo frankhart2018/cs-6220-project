@@ -10,8 +10,8 @@ class GetEmbeddings(TaskRunner):
         self.__sbert_model = SentenceTransformer('bert-base-nli-mean-tokens')
 
     def run(self, **kwargs):
-        if "df" not in kwargs:
-            raise ValueError("Missing argument: 'df'!")
+        required_args = ["df", "embeddings_path"]
+        self._required_args_checker(kwargs, required_args)
 
         df = kwargs["df"]
         movie_infos_cleaned = df.iloc[:, 1].tolist()

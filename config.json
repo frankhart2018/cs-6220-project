@@ -7,13 +7,27 @@
   "fillers": [
     "release_date"
   ],
-  "movie_desc_embeddings_runner": {
-    "tsne": {
-      "n_components": 2,
-      "init": "random",
+  "tasks": {
+    "movie_desc_embeddings_runner": {
       "embeddings_path": "data/embeddings.npy",
-      "tsne_x_path": "data/tsne_x.npy",
-      "tsne_y_path": "data/tsne_y.npy"
+      "n_components": 2,
+      "tsne": {
+        "init": "random",
+        "tsne_x_path": "data/tsne_x.npy",
+        "tsne_y_path": "data/tsne_y.npy"
+      },
+      "pca": {
+        "pca_x_path": "data/pca_x.npy",
+        "pca_y_path": "data/pca_y.npy"
+      }
     }
+  },
+  "run_tasks": {
+    "movie_desc_embeddings_runner": [
+      "clean_lemmatize",
+      "get_embeddings",
+      "get_pca_coords",
+      "get_tsne_coords"
+    ]
   }
 }

@@ -22,8 +22,8 @@ class CleanLemmatize(TaskRunner):
         return lemmatized_sentence.strip()
 
     def run(self, **kwargs):
-        if "df" not in kwargs:
-            raise ValueError("Missing argument: 'df'!")
+        required_args = ["df"]
+        self._required_args_checker(kwargs, required_args)
 
         df = kwargs["df"]
         alpha_numeric_re = re.compile(r"[^a-zA-Z0-9 ]")
