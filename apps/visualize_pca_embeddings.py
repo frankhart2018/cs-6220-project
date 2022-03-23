@@ -6,16 +6,16 @@ import pandas as pd
 
 st.set_page_config(
     layout="wide",
-    page_title="Visualize Embeddings",
+    page_title="Visualize PCA Embeddings",
 )
 
-st.title("t-SNE embeddings for movie descriptions")
+st.title("PCA embeddings for movie descriptions")
 
 
-x = np.load("x_arr.npy").tolist()
-y = np.load("y_arr.npy").tolist()
+x = np.load("data/pca_x.npy").tolist()
+y = np.load("data/pca_y.npy").tolist()
 
-df_movie = pd.read_csv("../movies_filled_cleaned_processed.csv")
+df_movie = pd.read_csv("movies_filled_cleaned_processed.csv")
 movie_names = df_movie['Title'].tolist()
 
 show_info = st.checkbox("Show details")
@@ -27,8 +27,8 @@ if show_info:
 We have taken the short summary of the movie's plot and converted it into high-dimensional vector,
 using a pre-trained neural network model called [SentenceBert](https://www.sbert.net/) this vector is also called
 embedding. The embedding that this model gives is 786-dimensional, since we are not :robot_face:, we cannot visualize
-that, so t-SNE reduces the vector into 2 dimensions, but still maintaining the knowledge that was encoded
-in those 786 dimensions as far as possible. This graph is basically a t-SNE reduced plot in 2 dimensions for the
+that, so PCA reduces the vector into 2 dimensions, but still maintaining the knowledge that was encoded
+in those 786 dimensions as far as possible. This graph is basically a PCA reduced plot in 2 dimensions for the
 786-dimensional vector.
 
 **What does this signify?**
@@ -39,12 +39,12 @@ by hovering on the dots in the plot below.
 else:
     st.write("")
 
-vals = {'tSNE_1': x, 'tSNE_2': y, 'movie_names': movie_names}
+vals = {'PCA_1': x, 'PCA_2': y, 'movie_names': movie_names}
 
 df = pd.DataFrame(vals)
 
-fig = px.scatter(df, x='tSNE_1', y='tSNE_2', hover_name='movie_names',
-                 title="<b>tSNE reduction for movie description embeddings</b>",
+fig = px.scatter(df, x='PCA_1', y='PCA_2', hover_name='movie_names',
+                 title="<b>PCA reduction for movie description embeddings</b>",
                  width=1200, height=600)
 fig.update_traces(mode="markers")
 
