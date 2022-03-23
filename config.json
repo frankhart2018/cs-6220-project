@@ -23,20 +23,20 @@
     },
     "content_based_filtering_runner": {
       "tfidf": {
-        "similarity_matrix_path": "data/similarity_matrix.npy",
-        "df_mapping_path": "data/df_mapping"
+        "similarity_matrix_path_tfidf": "data/similarity_matrix_tfidf.npy",
+        "df_mapping_path_tfidf": "data/df_mapping_tfidf"
+      },
+      "nn": {
+        "similarity_matrix_path_nn": "data/similarity_matrix_nn.npy",
+        "df_mapping_path_nn": "data/df_mapping_nn"
       }
     }
   },
   "run_tasks": {
-    "movie_desc_embeddings_runner": [
-      "clean_lemmatize",
-      "get_embeddings",
-      "get_pca_coords",
-      "get_tsne_coords"
-    ],
+
     "content_based_filtering_runner": [
-      "compute_similarity_matrix"
+      "compute_similarity_matrix_tfidf",
+      "compute_similarity_matrix_nn"
     ]
   }
 }

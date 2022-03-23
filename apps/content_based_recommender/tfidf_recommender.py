@@ -31,9 +31,9 @@ st.title("Content Based Filtering (TfIdf)")
 
 df = pd.read_csv("movies_filled_cleaned_processed.csv")
 
-similarity_matrix = np.load("data/similarity_matrix.npy")
+similarity_matrix = np.load("data/similarity_matrix_tfidf.npy")
 
-with open("data/df_mapping", "rb") as f:
+with open("data/df_mapping_tfidf", "rb") as f:
     df_mapping = pickle.load(f)
 
 movie_titles_tup = tuple(["--Select a movie--"] + df['Title'].tolist())

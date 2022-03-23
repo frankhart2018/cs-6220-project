@@ -42,8 +42,13 @@ if __name__ == "__main__":
 
     # TfIdf config
     tfidf_config = content_based_filtering_runner_config["tfidf"]
-    similarity_matrix_path = tfidf_config["similarity_matrix_path"]
-    df_mapping_path = tfidf_config["df_mapping_path"]
+    similarity_matrix_path_tfidf = tfidf_config["similarity_matrix_path_tfidf"]
+    df_mapping_path_tfidf = tfidf_config["df_mapping_path_tfidf"]
+
+    # Nn config
+    nn_config = content_based_filtering_runner_config["nn"]
+    similarity_matrix_path_nn = nn_config["similarity_matrix_path_nn"]
+    df_mapping_path_nn = nn_config["df_mapping_path_nn"]
 
     input_dict = {
         "df": df,
@@ -54,8 +59,10 @@ if __name__ == "__main__":
         "tsne_y_path": tsne_y_path,
         "pca_x_path": pca_x_path,
         "pca_y_path": pca_y_path,
-        "similarity_matrix_path": similarity_matrix_path,
-        "df_mapping_path": df_mapping_path,
+        "similarity_matrix_path_tfidf": similarity_matrix_path_tfidf,
+        "df_mapping_path_tfidf": df_mapping_path_tfidf,
+        "similarity_matrix_path_nn": similarity_matrix_path_nn,
+        "df_mapping_path_nn": df_mapping_path_nn,
     }
 
     tasks = config["run_tasks"]

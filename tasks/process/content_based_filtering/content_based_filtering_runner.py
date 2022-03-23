@@ -3,7 +3,8 @@ import os
 import shutil
 
 from tasks.process.task_runner import TaskRunner
-from tasks.process.content_based_filtering.subtasks.compute_similarity_matrix import ComputeSimilarityMatrix
+from tasks.process.content_based_filtering.subtasks.compute_similarity_matrix_tfidf import ComputeSimilarityMatrixTfidf
+from tasks.process.content_based_filtering.subtasks.compute_similarity_matrix_nn import ComputeSimilarityMatrixNn
 
 
 class ContentBasedFilteringRunner(TaskRunner):

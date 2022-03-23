@@ -7,9 +7,9 @@ import pickle
 from tasks.process.task_runner import TaskRunner
 
 
-class ComputeSimilarityMatrix(TaskRunner):
+class ComputeSimilarityMatrixTfidf(TaskRunner):
     def run(self, **kwargs):
-        required_args = ["df", "similarity_matrix_path", "df_mapping_path"]
+        required_args = ["df", "similarity_matrix_path_tfidf", "df_mapping_path_tfidf"]
         self._required_args_checker(kwargs, required_args)
 
         df = kwargs["df"]
@@ -20,7 +20,7 @@ class ComputeSimilarityMatrix(TaskRunner):
         similarity_matrix = linear_kernel(overview_matrix, overview_matrix)
         df_mapping = pd.Series(df.index, index=df['Title'])
 
-        np.save(kwargs["similarity_matrix_path"], similarity_matrix)
+        np.save(kwargs["similarity_matrix_path_tfidf"], similarity_matrix)
 
-        with open(kwargs["df_mapping_path"], "wb") as f:
+        with open(kwargs["df_mapping_path_tfidf"], "wb") as f:
             pickle.dump(df_mapping, f)
