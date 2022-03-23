@@ -18,7 +18,7 @@ components.html(
       <div class="card-body">
         <h5 class="card-title">Movie similarity plots</h5>
         <p class="card-text" style='text-align: justify; text-justify: inter-word;'>Using techniques like sentence embeddings, t-SNE, and PCA we have created a visualization that shows similar movies in a 2-D space</p>
-        <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/movies_embeddings.py" class="btn btn-primary" target="_blank">Check it out</a>
+        <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/movie_desc_embeddings/movies_embeddings.py" class="btn btn-primary" target="_blank">Check it out</a>
       </div>
     </div>
     """,
