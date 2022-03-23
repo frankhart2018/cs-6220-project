@@ -19,14 +19,14 @@ components.html(
           <div class="card-body">
             <h5 class="card-title">t-SNE</h5>
             <p class="card-text" style='text-align: justify; text-justify: inter-word;'>Using t-SNE algorithm to reduce dimensionality.</p>
-            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/visualize_tsne_embeddings.py" class="btn btn-primary" target="_blank">Check it out</a>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/movie_desc_embeddings/visualize_tsne_embeddings.py" class="btn btn-primary" target="_blank">Check it out</a>
           </div>
         </div>
         <div class="card" style="width: 18rem; margin-right: 10px;">
           <div class="card-body">
             <h5 class="card-title">PCA</h5>
             <p class="card-text" style='text-align: justify; text-justify: inter-word;'>Using PCA algorithm to reduce dimensionality.</p>
-            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/visualize_pca_embeddings.py" class="btn btn-primary" target="_blank">Check it out</a>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/movie_desc_embeddings/visualize_pca_embeddings.py" class="btn btn-primary" target="_blank">Check it out</a>
           </div>
         </div>
     </div>
