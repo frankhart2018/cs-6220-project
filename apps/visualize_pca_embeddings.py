@@ -11,7 +11,6 @@ st.set_page_config(
 
 st.title("PCA embeddings for movie descriptions")
 
-
 x = np.load("data/pca_x.npy").tolist()
 y = np.load("data/pca_y.npy").tolist()
 
