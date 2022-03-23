@@ -20,6 +20,12 @@
         "pca_x_path": "data/pca_x.npy",
         "pca_y_path": "data/pca_y.npy"
       }
+    },
+    "content_based_filtering_runner": {
+      "tfidf": {
+        "similarity_matrix_path": "data/similarity_matrix.npy",
+        "df_mapping_path": "data/df_mapping"
+      }
     }
   },
   "run_tasks": {
@@ -28,6 +34,9 @@
       "get_embeddings",
       "get_pca_coords",
       "get_tsne_coords"
+    ],
+    "content_based_filtering_runner": [
+      "compute_similarity_matrix"
     ]
   }
 }

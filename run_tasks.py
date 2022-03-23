@@ -3,6 +3,7 @@ import argparse
 import json
 
 from tasks.process.movie_desc_embeddings.movie_desc_embeddings_runner import MovieDescEmbeddingsRunner
+from tasks.process.content_based_filtering.content_based_filtering_runner import ContentBasedFilteringRunner
 
 
 if __name__ == "__main__":
@@ -16,7 +17,9 @@ if __name__ == "__main__":
 
     df = pd.read_csv(args.dataset)
 
-    # Task 1 config
+    #################################################################
+    # TASK 1 Config
+    #################################################################
     movie_desc_embeddings_runner_config = config["tasks"]["movie_desc_embeddings_runner"]
     tsne_config = movie_desc_embeddings_runner_config["tsne"]
     pca_config = movie_desc_embeddings_runner_config["pca"]
@@ -32,6 +35,16 @@ if __name__ == "__main__":
     pca_x_path = pca_config["pca_x_path"]
     pca_y_path = pca_config["pca_y_path"]
 
+    #################################################################
+    # TASK 2 Config
+    #################################################################
+    content_based_filtering_runner_config = config["tasks"]["content_based_filtering_runner"]
+
+    # TfIdf config
+    tfidf_config = content_based_filtering_runner_config["tfidf"]
+    similarity_matrix_path = tfidf_config["similarity_matrix_path"]
+    df_mapping_path = tfidf_config["df_mapping_path"]
+
     input_dict = {
         "df": df,
         "n_components": n_components,
@@ -41,12 +54,15 @@ if __name__ == "__main__":
         "tsne_y_path": tsne_y_path,
         "pca_x_path": pca_x_path,
         "pca_y_path": pca_y_path,
+        "similarity_matrix_path": similarity_matrix_path,
+        "df_mapping_path": df_mapping_path,
     }
 
     tasks = config["run_tasks"]
 
     for task in tasks:
         task_name = task.replace("_", " ").title().replace(" ", "")
+        print(f"Running {task_name}")
         subtasks = config["run_tasks"][task]
         runner = eval(task_name)(subtasks=subtasks)
         runner.run(**input_dict)

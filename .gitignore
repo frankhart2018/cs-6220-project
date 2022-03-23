@@ -4,4 +4,5 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 *.csv
+*.ipynb
 !movies_filled_cleaned_processed.csv
