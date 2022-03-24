@@ -1,13 +1,10 @@
 import os
 
 from tasks.process.task_runner import TaskRunner
-from tasks.process.movie_desc_embeddings.subtasks.clean_lemmatize import CleanLemmatize
-from tasks.process.movie_desc_embeddings.subtasks.get_embeddings import GetEmbeddings
-from tasks.process.movie_desc_embeddings.subtasks.get_tsne_coords import GetTsneCoords
-from tasks.process.movie_desc_embeddings.subtasks.get_pca_coords import GetPcaCoords
+from tasks.process.genre_popularity.subtasks.compute_genre_occurence_dict import ComputeGenreOccurenceDict
 
 
-class MovieDescEmbeddingsRunner(TaskRunner):
+class GenrePopularityRunner(TaskRunner):
     def __init__(self, subtasks):
         self.__subtasks = subtasks
 
