@@ -22,7 +22,7 @@ components.html(
             <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/movie_desc_embeddings/movies_embeddings.py" class="btn btn-primary" target="_blank">Check it out</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-right: 10px;">
           <div class="card-body">
             <h5 class="card-title">Content based recommender</h5>
             <p class="card-text" style='text-align: justify; text-justify: inter-word;'>Using content-based filtering technique, we present simple recommender systems that recommend you movies based on titles that you have already watched</p>
