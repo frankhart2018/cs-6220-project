@@ -29,6 +29,13 @@ components.html(
             <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/content_based_recommender/content_based_filtering.py" class="btn btn-primary" target="_blank">Check it out</a>
           </div>
         </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Genre popularity</h5>
+            <p class="card-text" style='text-align: justify; text-justify: inter-word;'>Which genres are most popular, and which genres match together</p>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/genre_popularity/genre_popularity_curves.py" class="btn btn-primary" target="_blank">Check it out</a>
+          </div>
+        </div>
     </div>
     """,
     height=600,
