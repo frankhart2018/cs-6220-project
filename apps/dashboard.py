@@ -49,7 +49,7 @@ components.html(
         </div>
     </div>
     
-    <div class="row" style="margin-left: 10px;">
+    <div class="row" style="margin-left: 10px; margin-top: 10px;">
         <div class="card" style="width: 18rem; margin-right: 10px;">
           <div class="card-body">
             <h5 class="card-title">Topic modelling</h5>
