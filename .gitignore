@@ -6,3 +6,4 @@ __pycache__/
 *.csv
 *.ipynb
 !movies_filled_cleaned_processed.csv
+!notebooks/*.ipynb
