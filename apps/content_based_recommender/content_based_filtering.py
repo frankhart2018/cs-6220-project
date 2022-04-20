@@ -9,6 +9,19 @@ st.set_page_config(
 
 st.title("Select the algorithm to use for content based filtering:")
 
+show_info = st.checkbox("Show details")
+
+if show_info:
+    st.markdown("""
+**What are these options?**
+
+These are two different techniques using which we filter movies to be recommended based on a given movie.
+When you select a movie, we take it and convert it into a vector representation, this is then used for
+a similarity indexing between movies with similar movie plot representations.
+    """)
+else:
+    st.write("")
+
 components.html(
     """
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">

@@ -29,6 +29,21 @@ st.set_page_config(
 
 st.title("Content Based Filtering (NN)")
 
+show_info = st.checkbox("Show details")
+
+if show_info:
+    st.markdown("""
+**How are recommending similar movies?**
+
+The first step we performed was to take the movies plot and pass it through a transformer based neural network 
+model called SentenceBERT, this model returns a high-dimensional vector representation of the movie's plot.
+Once, this is computed, we can use this to create a similarity matrix with an algorithm called 
+linear kernel (available in scikit-learn). This matrix is then used to compute the similarity between 
+movies.
+    """)
+else:
+    st.write("")
+
 df = pd.read_csv("movies_filled_cleaned_processed.csv")
 
 similarity_matrix = np.load("data/similarity_matrix_nn.npy")

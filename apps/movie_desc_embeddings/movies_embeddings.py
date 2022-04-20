@@ -9,6 +9,19 @@ st.set_page_config(
 
 st.title("Select the type of algorithm to reduce dimensions with:")
 
+show_info = st.checkbox("Show details")
+
+if show_info:
+    st.markdown("""
+**What are these algorithms?**
+
+These are dimensionality reduction algorithms. We are using these to reduce the dimensions of the movie embeddings.
+The movie embeddings are high-dimensional vector representations of the movies plots which are computed using
+a transformer based neural network model called SentenceBERT.
+    """)
+else:
+    st.write("")
+
 components.html(
     """
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">

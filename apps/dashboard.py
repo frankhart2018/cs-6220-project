@@ -18,7 +18,7 @@ components.html(
         <div class="card" style="width: 18rem; margin-right: 10px;">
           <div class="card-body">
             <h5 class="card-title">Movie similarity plots</h5>
-            <p class="card-text" style='text-align: justify; text-justify: inter-word; word-break: break-all'>Using techniques like sentence embeddings, t-SNE, and PCA we have created a visualization that shows similar movies in a 2-D space</p>
+            <p class="card-text" style='text-align: justify; text-justify: inter-word; word-break: break-all'>Using techniques like sentence embeddings, t-SNE, and PCA we have created a visualization that shows similar movies in a 2-D space.</p>
             <br>
             <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/movie_desc_embeddings/movies_embeddings.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
           </div>
@@ -34,7 +34,7 @@ components.html(
         <div class="card" style="width: 18rem; margin-right: 10px;">
           <div class="card-body">
             <h5 class="card-title">Genre popularity</h5>
-            <p class="card-text" style='text-align: justify; text-justify: inter-word; word-break: break-all'>Which genres are most popular, and which genres match together</p>
+            <p class="card-text" style='text-align: justify; text-justify: inter-word; word-break: break-all'>Which genres are most popular, and which genres match together.</p>
             <br>
             <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/genre_popularity/genre_popularity_curves.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
           </div>
@@ -42,7 +42,7 @@ components.html(
         <div class="card" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">Distributor Sales</h5>
-            <p class="card-text" style='text-align: justify; text-justify: initial; word-break: break-all'>Which distributors are most popular at domestic, international, and world level</p>
+            <p class="card-text" style='text-align: justify; text-justify: initial; word-break: break-all'>Which distributors are most popular at domestic, international, and world level.</p>
             <br>
             <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/distributor/distributor_sales.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
           </div>
