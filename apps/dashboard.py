@@ -48,6 +48,17 @@ components.html(
           </div>
         </div>
     </div>
+    
+    <div class="row" style="margin-left: 10px;">
+        <div class="card" style="width: 18rem; margin-right: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Topic modelling</h5>
+            <p class="card-text" style='text-align: justify; text-justify: inter-word; word-break: break-all'>Using techniques like sentence embeddings, t-SNE, and PCA we have created a visualization that shows similar movies in a 2-D space.</p>
+            <br>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/topic_modelling/topic_modelling.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
+          </div>
+        </div>
+    </div>
     """,
     height=600,
 )
