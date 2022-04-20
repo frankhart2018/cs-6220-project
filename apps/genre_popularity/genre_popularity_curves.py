@@ -26,6 +26,20 @@ st.set_page_config(
 
 st.title("Most popular genres")
 
+show_info = st.checkbox("Show details")
+
+if show_info:
+    st.markdown("""
+**How is this done?**
+
+This is a very simple task, it involves counting the genres as they occur in various movies in the dataset.
+Once, that is done we can display them as a bar chart. The next step is to find the top 5 genres that match
+the genre of interest, this is done by finding the top 5 genres that occur in the dataset together and then
+counting how many movies have that combination of genres.
+    """)
+else:
+    st.write("")
+
 grouped_genres = read_pickle("data/grouped_genres_dict")
 genre_count = read_pickle("data/genre_count_dict")
 
