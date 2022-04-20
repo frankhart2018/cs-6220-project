@@ -15,6 +15,7 @@ def main():
         page_title="Genre Popularity",
     )
 
+    st.title("Topic Modelling")
     with open("data/lda_dump.html", "r") as f:
         lda_html = f.read()
 
