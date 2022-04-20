@@ -34,15 +34,15 @@
     "genre_popularity_runner": {
       "grouped_genres_dict_path": "data/grouped_genres_dict",
       "genre_count_dict_path": "data/genre_count_dict"
+    },
+    "topic_modelling_runner": {
+      "lda_dump_path": "data/lda_dump.html"
     }
   },
   "run_tasks": {
-    "content_based_filtering_runner": [
-      "compute_similarity_matrix_tfidf",
-      "compute_similarity_matrix_nn"
-    ],
-    "genre_popularity_runner": [
-      "compute_genre_occurence_dict"
+    "topic_modelling_runner": [
+      "clean_remove_stopwords",
+      "build_dump_model"
     ]
   }
 }

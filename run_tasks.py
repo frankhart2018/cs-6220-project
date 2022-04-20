@@ -1,13 +1,17 @@
 import pandas as pd
 import argparse
 import json
+import warnings
 
 from tasks.process.movie_desc_embeddings.movie_desc_embeddings_runner import MovieDescEmbeddingsRunner
 from tasks.process.content_based_filtering.content_based_filtering_runner import ContentBasedFilteringRunner
 from tasks.process.genre_popularity.genre_popularity_runner import GenrePopularityRunner
+from tasks.process.topic_modelling.topic_modelling_runner import TopicModellingRunner
 
 
 if __name__ == "__main__":
+    warnings.filterwarnings("ignore")
+
     parser = argparse.ArgumentParser(description="Run tasks")
     parser.add_argument("-d", "--dataset", type=str, required=True, help="Dataset to use")
 
@@ -52,11 +56,17 @@ if __name__ == "__main__":
     df_mapping_path_nn = nn_config["df_mapping_path_nn"]
 
     #################################################################
-    # TASK 2 Config
+    # TASK 3 Config
     #################################################################
     genre_popularity_runner_config = config["tasks"]["genre_popularity_runner"]
     grouped_genres_dict_path = genre_popularity_runner_config["grouped_genres_dict_path"]
     genre_count_path = genre_popularity_runner_config["genre_count_dict_path"]
+
+    #################################################################
+    # TASK 4 Config
+    #################################################################
+    topic_modelling_runner_config = config["tasks"]["topic_modelling_runner"]
+    lda_dump_path = topic_modelling_runner_config["lda_dump_path"]
 
     input_dict = {
         "df": df,
@@ -73,6 +83,7 @@ if __name__ == "__main__":
         "df_mapping_path_nn": df_mapping_path_nn,
         "grouped_genres_dict_path": grouped_genres_dict_path,
         "genre_count_dict_path": genre_count_path,
+        "lda_dump_path": lda_dump_path
     }
 
     tasks = config["run_tasks"]
