@@ -51,6 +51,8 @@ similarity_matrix = np.load("data/similarity_matrix_tfidf.npy")
 with open("data/df_mapping_tfidf", "rb") as f:
     df_mapping = pickle.load(f)
 
+st.write("Go ahead and select a movie to see similar movies")
+
 movie_titles_tup = tuple(["--Select a movie--"] + df['Title'].tolist())
 
 movie_name = st.selectbox(
