@@ -19,14 +19,16 @@ components.html(
           <div class="card-body">
             <h5 class="card-title">TfIdf</h5>
             <p class="card-text" style='text-align: justify; text-justify: inter-word;'>Using TfIdf for content based filtering.</p>
-            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/content_based_recommender/tfidf_recommender.py" class="btn btn-primary" target="_blank">Check it out</a>
+            <br>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/content_based_recommender/tfidf_recommender.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
           </div>
         </div>
         <div class="card" style="width: 18rem; margin-right: 10px;">
           <div class="card-body">
             <h5 class="card-title">NN</h5>
             <p class="card-text" style='text-align: justify; text-justify: inter-word;'>Using NN for content based filtering.</p>
-            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/content_based_recommender/nn_recommender.py" class="btn btn-primary" target="_blank">Check it out</a>
+            <br>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/content_based_recommender/nn_recommender.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
           </div>
         </div>
     </div>
