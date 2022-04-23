@@ -1,10 +1,3 @@
-import pyLDAvis.gensim_models
-import gensim
-import gensim.corpora as corpora
-from gensim.utils import simple_preprocess
-from nltk.corpus import stopwords
-import pandas as pd
-import re
 import streamlit as st
 import streamlit.components.v1 as components
 
