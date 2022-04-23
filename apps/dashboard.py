@@ -58,6 +58,14 @@ components.html(
             <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/topic_modelling/topic_modelling.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
           </div>
         </div>
+        <div class="card" style="width: 18rem; margin-right: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Genre over years</h5>
+            <p class="card-text" style='text-align: justify; text-justify: inter-word; word-break: break-all'>The trend in popular genres over the years from 1940s-2020s. How popular is your favourite genre?</p>
+            <br>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/genre_over_years/genre_over_years.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
+          </div>
+        </div>
     </div>
     """,
     height=600,
