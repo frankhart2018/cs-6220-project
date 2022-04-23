@@ -1,8 +1,6 @@
 import random
 import re
 import pandas as pd
-import ntlk
-from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score
@@ -10,10 +8,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.preprocessing import MultiLabelBinarizer
 import streamlit as st
+import pickle
 
 
-ntlk.download('stopwords')
-stop_words = set(stopwords.words('english'))
+with open("data/stopwords", "rb") as f:
+    stop_words = pickle.load(f)
 
 
 def text_clean(text):
