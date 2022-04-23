@@ -6,5 +6,43 @@
   ],
   "fillers": [
     "release_date"
-  ]
+  ],
+  "tasks": {
+    "movie_desc_embeddings_runner": {
+      "embeddings_path": "data/embeddings.npy",
+      "n_components": 2,
+      "tsne": {
+        "init": "random",
+        "tsne_x_path": "data/tsne_x.npy",
+        "tsne_y_path": "data/tsne_y.npy"
+      },
+      "pca": {
+        "pca_x_path": "data/pca_x.npy",
+        "pca_y_path": "data/pca_y.npy"
+      }
+    },
+    "content_based_filtering_runner": {
+      "tfidf": {
+        "similarity_matrix_path_tfidf": "data/similarity_matrix_tfidf.npy",
+        "df_mapping_path_tfidf": "data/df_mapping_tfidf"
+      },
+      "nn": {
+        "similarity_matrix_path_nn": "data/similarity_matrix_nn.npy",
+        "df_mapping_path_nn": "data/df_mapping_nn"
+      }
+    },
+    "genre_popularity_runner": {
+      "grouped_genres_dict_path": "data/grouped_genres_dict",
+      "genre_count_dict_path": "data/genre_count_dict"
+    },
+    "topic_modelling_runner": {
+      "lda_dump_path": "data/lda_dump.html"
+    }
+  },
+  "run_tasks": {
+    "topic_modelling_runner": [
+      "clean_remove_stopwords",
+      "build_dump_model"
+    ]
+  }
 }
