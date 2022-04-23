@@ -11,6 +11,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 import streamlit as st
 
 
+ntlk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
 
