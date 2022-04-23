@@ -9,6 +9,8 @@ st.set_page_config(
 
 st.title("Team Orion Project - Highest Grossing Movies Dataset")
 
+st.markdown("[Team Members](https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/team.py)")
+
 show_info = st.checkbox("Show details")
 
 if show_info:
