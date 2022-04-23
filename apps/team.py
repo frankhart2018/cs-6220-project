@@ -16,7 +16,7 @@ components.html(
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <div class="row" style="margin-left: 10px;">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://frankhart2017.github.io/portfolio/img/dp.jpg" alt="Aruvi">
+            <img class="card-img-top" src="https://i.ibb.co/Rp6pXB3/Whats-App-Image-2022-04-23-at-5-07-58-PM.jpg" alt="Aruvi">
             <div class="card-body">
                 <h5 class="card-title">Aruvi Puhazhendhi</h5>
                 <p class="card-text">I love machine learning and have been working with neural network based computer vision for quite some time. Apart from ML I also find compiler and programming language design very interesting and spend some time with low-level systems programming.</p>
