@@ -57,10 +57,10 @@ components.html(
         </div>
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">Distributor Sales</h5>
-            <p class="card-text" style='text-align: justify; text-justify: initial; word-break: break-all'>Which distributors are most popular at domestic, international, and world level.</p>
+            <h5 class="card-title">International v/s Domestic Sales</h5>
+            <p class="card-text" style='text-align: justify; text-justify: initial; word-break: break-all'>Which distributors and genres are most popular at domestic, international, and world level.</p>
             <br>
-            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/distributor/distributor_sales.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/international_v_domestic/international_v_domestic.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
           </div>
         </div>
     </div>
