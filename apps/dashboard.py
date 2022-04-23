@@ -9,6 +9,22 @@ st.set_page_config(
 
 st.title("Team Orion Project - Highest Grossing Movies Dataset")
 
+show_info = st.checkbox("Show details")
+
+if show_info:
+    st.markdown("""
+**Dataset used**
+
+For our project we used the [Top 1000 Highest Grossing Movies Dataset](https://www.kaggle.com/datasets/sanjeetsinghnaik/top-1000-highest-grossing-movies) 
+from Kaggle. This dataset consists details like movie title, plot, release date, world, domestic, and international gross.
+
+**Tasks**
+
+The cards displayed below are the various tasks that we performed on the dataset.
+    """)
+else:
+    st.write("")
+
 components.html(
     """
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -66,7 +82,23 @@ components.html(
             <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/genre_over_years/genre_over_years.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
           </div>
         </div>
+        <div class="card" style="width: 18rem; margin-right: 10px;">
+          <div class="card-body">
+            <h5 class="card-title">Genre prediction</h5>
+            <p class="card-text" style='text-align: justify; text-justify: inter-word; word-break: break-all'>Predicting the genre of a movie, given its plot. Select your favourite movie from among the listed titles and get its genre.</p>
+            <br>
+            <a href="https://share.streamlit.io/frankhart2018/cs-6220-project/siddhartha/apps/genre_prediction/genre_prediction.py" class="btn btn-primary" target="_blank" style="position: absolute; left: 0;  right: 0; bottom: 0">Check it out</a>
+          </div>
+        </div>
     </div>
     """,
     height=600,
 )
+
+st.markdown("""
+# Code
+
+If you want to access the code for this project, you can find it on 
+[GitHub CS-6220 Project](https://github.com/frankhart2018/cs-6220-project). This contains the code base
+for data preprocessing, modelling and the streamlit applications. 
+""")
